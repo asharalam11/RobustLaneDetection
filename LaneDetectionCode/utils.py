@@ -135,8 +135,12 @@ class ConvLSTMCell(nn.Module):
         return h_next, c_next
 
     def init_hidden(self, batch_size):
-        return (torch.zeros(batch_size, self.hidden_dim, self.height, self.width).cuda(),
-                torch.zeros(batch_size, self.hidden_dim, self.height, self.width).cuda())
+        return (torch.zeros(batch_size, self.hidden_dim, self.height, self.width),
+                torch.zeros(batch_size, self.hidden_dim, self.height, self.width))
+        # Commenting for shifting to CPU
+        #return (torch.zeros(batch_size, self.hidden_dim, self.height, self.width).cuda(),
+        #        torch.zeros(batch_size, self.hidden_dim, self.height, self.width).cuda())
+
 
 
 class ConvLSTM(nn.Module):
@@ -247,9 +251,3 @@ class ConvLSTM(nn.Module):
         if not isinstance(param, list):
             param = [param] * num_layers
         return param
-
-
-
-
-
-
