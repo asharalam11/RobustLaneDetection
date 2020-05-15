@@ -14,8 +14,8 @@ class_num = 2
 # path
 train_path = "./data/train_index.txt"
 val_path = "./data/val_index.txt"
-test_path = "./data/test_index_demo.txt"
-save_path = "./save/result/"
+test_path = "./data/test_index_mine.txt"
+save_path = "./../../save/result/"
 pretrained_path='./pretrained/unetlstm.pth'
 
 # weight
