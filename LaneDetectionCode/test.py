@@ -8,8 +8,6 @@ from torch.optim import lr_scheduler
 from PIL import Image
 import numpy as np
 import cv2
-sys.path.append('/opt/ros/kinetic/lib/python2.7/dist-packages') # append back in order to import rospy
-
 
 def output_result(model, test_loader, device):
     model.eval()
