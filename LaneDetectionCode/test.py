@@ -1,4 +1,3 @@
-# Adding this comment to check if upstream changes are pulled to cloud
 import torch
 import config
 from config import args_setting
@@ -8,9 +7,6 @@ from torchvision import transforms
 from torch.optim import lr_scheduler
 from PIL import Image
 import numpy as np
-# Solving opencv and ROS
-import sys
-sys.path.remove('/opt/ros/kinetic/lib/python2.7/dist-packages') # in order to import cv2 under python3
 import cv2
 sys.path.append('/opt/ros/kinetic/lib/python2.7/dist-packages') # append back in order to import rospy
 
